@@ -5,8 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import java.util.List;
+
 import me.nereo.multi_image_selector.MultiImageSelector;
 import me.nereo.multi_image_selector.MultiImageSelectorActivity;
+import patient.yilin.com.testzidingyiview.chenjinshi.TestTranslucentActivity;
 
 /**
    github 绿色  是新增文件 红色 是忽略文件
@@ -21,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) {  //MUltiImageSelector 仿 微信多图选取
                 MultiImageSelector.create()
                             .showCamera(true)
                             .count(9)   //最大图片个数
@@ -29,6 +32,14 @@ public class MainActivity extends AppCompatActivity {
                          .start(MainActivity.this,REQUEST_IMAGE);
             }
         });
+
+        findViewById(R.id.btn1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, TestTranslucentActivity.class));
+            }
+        });
+
     }
 
 
@@ -36,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode==REQUEST_IMAGE&&resultCode==RESULT_OK){  //图片
+            List<String> path = data.getStringArrayListExtra(MultiImageSelectorActivity.EXTRA_RESULT);  //这里取到  选中的图片
             PostImagesActivity.startpostActivity(MainActivity.this,data.getStringArrayListExtra(MultiImageSelectorActivity.EXTRA_RESULT));
         }
     }

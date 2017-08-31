@@ -129,7 +129,7 @@ public class PostImagesActivity extends AppCompatActivity {
         dragImages = new ArrayList<>() ;
         originImages.add(pluspath) ; //添加按键 超过9张时 在adapter中隐藏
         dragImages.addAll(originImages) ;
-        new Thread(new MyRunnable(dragImages,originImages,dragImages,myHandler,false)).start();
+        new Thread(new MyRunnable(dragImages,originImages,dragImages,myHandler,false)).start(); //开启新线程 压缩图片
 
 
     }

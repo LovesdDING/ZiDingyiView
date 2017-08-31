@@ -126,7 +126,8 @@ public class MyCallBack extends ItemTouchHelper.Callback{
         if (null== dragListener) {
             return ;
         }
-        if(dY>=(recyclerView.getHeight()-viewHolder.itemView.getBottom()-CommonUtils.getPixelById(R.dimen.article_post_delete))){  //拖到删除处
+        if(dY>=(recyclerView.getHeight()-viewHolder.itemView.getBottom()  //item  底部距离recyclerView 的顶部高度
+                -CommonUtils.getPixelById(R.dimen.article_post_delete))){  //拖到删除处
             dragListener.deleteState(true);
             if(up){  //在删除处放手 则删除item
                 viewHolder.itemView.setVisibility(View.INVISIBLE);//先设置不可见 如果不设置的话  会看到viewholder 返回到原位置时才消失  因为remove 会在viewholder 动画执行完成后才将 Viewholder删除
