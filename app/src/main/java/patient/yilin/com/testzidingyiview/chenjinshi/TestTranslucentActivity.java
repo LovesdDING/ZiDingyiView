@@ -18,11 +18,13 @@ public class TestTranslucentActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
 
-    @SuppressLint("NewApi")
+    @SuppressLint("NewApi")   //屏蔽android  lint错误
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);  //设置状态栏 透明 但是toolBar  会顶上去   状态栏 会遮挡一部分界面
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION); //设置 虚拟导航栏 透明
+//        getWindow().setNavigationBarColor(getResources().getColor(R.color.colorAccent));  //设置导航栏颜色
         setContentView(R.layout.activity_test_translucent);
         //5.0+ 可以直接使用API 来改变状态栏的颜色
 //        getWindow().setStatusBarColor(getResources().getColor(R.color.holo_red_light));

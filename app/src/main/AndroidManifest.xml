@@ -25,7 +25,8 @@
         <activity
             android:name="me.nereo.multi_image_selector.MultiImageSelectorActivity"
             android:configChanges="orientation|screenSize" />
-        <activity android:name=".chenjinshi.TestTranslucentActivity"></activity>
+        <activity android:name=".chenjinshi.TestTranslucentActivity" />
+        <activity android:name=".chenjinshi.TestTanslucent2Activity"></activity>
     </application>
 
 </manifest>

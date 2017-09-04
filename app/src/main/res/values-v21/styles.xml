@@ -6,7 +6,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <!--<item name="android:textColor">@color/mytextcolor</item>-->
-        <item name="android:navigationBarColor">@color/holo_red_dark</item>
+        <!--<item name="android:navigationBarColor">@color/holo_red_dark</item>-->
         <!--NavigationBar  下方的导航条的颜色-->
     </style>
 </resources>
