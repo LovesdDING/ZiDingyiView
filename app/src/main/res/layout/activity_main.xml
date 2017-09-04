@@ -20,4 +20,11 @@
         android:text="沉浸式"
         android:layout_below="@id/btn"
         />
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cardView"
+        android:layout_below="@id/btn1"
+        />
 </RelativeLayout>
