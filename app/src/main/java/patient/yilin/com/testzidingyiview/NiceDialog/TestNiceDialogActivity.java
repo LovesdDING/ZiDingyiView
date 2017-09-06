@@ -123,6 +123,7 @@ public class TestNiceDialogActivity extends AppCompatActivity {
                         .setMargin(60)
                         .setOutCancel(false)
                         .show(getSupportFragmentManager()) ;
+//                haha
             }
         });
 
