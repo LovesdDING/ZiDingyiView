@@ -3,4 +3,8 @@
     <string name="glide_plus_icon_string">android.resource://</string>
     <string name="post_delete_tv_d">拖动到此处，进行删除</string>
     <string name="post_delete_tv_s"> 放开手指，进行删除</string>
+    <string name="add_card">添加银行卡</string>
+    <string name="reserved_phonenumber">预留手机号</string>
+    <string name="verification_code">验证码</string>
+    <string name="input_bankcard_code">请输入银行卡号</string>
 </resources>

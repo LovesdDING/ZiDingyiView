@@ -27,7 +27,9 @@
             android:configChanges="orientation|screenSize" />
         <activity android:name=".chenjinshi.TestTranslucentActivity" />
         <activity android:name=".chenjinshi.TestTanslucent2Activity" />
-        <activity android:name=".CardView.TestCardViewActivity"></activity>
+        <activity android:name=".CardView.TestCardViewActivity" />
+        <activity android:name=".AddBankCard.AddBankCardActivity" />
+        <activity android:name=".NiceDialog.TestNiceDialogActivity"></activity>
     </application>
 
 </manifest>
